@@ -1,0 +1,69 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nova.AlgoLab.Facade", "Nova.AlgoLab.Facade\Nova.AlgoLab.Facade.csproj", "{B6E797B6-159F-4C8A-B036-6F54843825FE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nova.AlgoLab.Data.Contracts.Providers", "Nova.AlgoLab.Data.Contracts.Providers\Nova.AlgoLab.Data.Contracts.Providers.csproj", "{7AAC674C-6490-4037-83C6-2B569A5B675D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nova.AlgoLab.Data.Contracts.Dto", "Nova.AlgoLab.Data.Contracts.Dto\Nova.AlgoLab.Data.Contracts.Dto.csproj", "{4F0EFA08-C493-4974-8156-9C8F9EC8AD9C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Facade", "Facade", "{0537B1F0-8A10-4EA1-9315-50CF216E2B6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{5F3CF931-D972-49BD-A0D8-EE5336C9BB4F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contracts", "Contracts", "{D282C63D-DB8E-403B-BDF8-7B8D0CF05A7C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		DebugWithFake|Any CPU = DebugWithFake|Any CPU
+		DebugWithReal|Any CPU = DebugWithReal|Any CPU
+		DebugWithSpecs|Any CPU = DebugWithSpecs|Any CPU
+		ReleaseWithFake|Any CPU = ReleaseWithFake|Any CPU
+		ReleaseWithReal|Any CPU = ReleaseWithReal|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6E797B6-159F-4C8A-B036-6F54843825FE}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
+		{B6E797B6-159F-4C8A-B036-6F54843825FE}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
+		{B6E797B6-159F-4C8A-B036-6F54843825FE}.DebugWithReal|Any CPU.ActiveCfg = DebugWithReal|Any CPU
+		{B6E797B6-159F-4C8A-B036-6F54843825FE}.DebugWithReal|Any CPU.Build.0 = DebugWithReal|Any CPU
+		{B6E797B6-159F-4C8A-B036-6F54843825FE}.DebugWithSpecs|Any CPU.ActiveCfg = DebugWithSpecs|Any CPU
+		{B6E797B6-159F-4C8A-B036-6F54843825FE}.DebugWithSpecs|Any CPU.Build.0 = DebugWithSpecs|Any CPU
+		{B6E797B6-159F-4C8A-B036-6F54843825FE}.ReleaseWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
+		{B6E797B6-159F-4C8A-B036-6F54843825FE}.ReleaseWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
+		{B6E797B6-159F-4C8A-B036-6F54843825FE}.ReleaseWithReal|Any CPU.ActiveCfg = ReleaseWithReal|Any CPU
+		{B6E797B6-159F-4C8A-B036-6F54843825FE}.ReleaseWithReal|Any CPU.Build.0 = ReleaseWithReal|Any CPU
+		{7AAC674C-6490-4037-83C6-2B569A5B675D}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
+		{7AAC674C-6490-4037-83C6-2B569A5B675D}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
+		{7AAC674C-6490-4037-83C6-2B569A5B675D}.DebugWithReal|Any CPU.ActiveCfg = DebugWithReal|Any CPU
+		{7AAC674C-6490-4037-83C6-2B569A5B675D}.DebugWithReal|Any CPU.Build.0 = DebugWithReal|Any CPU
+		{7AAC674C-6490-4037-83C6-2B569A5B675D}.DebugWithSpecs|Any CPU.ActiveCfg = DebugWithSpecs|Any CPU
+		{7AAC674C-6490-4037-83C6-2B569A5B675D}.DebugWithSpecs|Any CPU.Build.0 = DebugWithSpecs|Any CPU
+		{7AAC674C-6490-4037-83C6-2B569A5B675D}.ReleaseWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
+		{7AAC674C-6490-4037-83C6-2B569A5B675D}.ReleaseWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
+		{7AAC674C-6490-4037-83C6-2B569A5B675D}.ReleaseWithReal|Any CPU.ActiveCfg = ReleaseWithReal|Any CPU
+		{7AAC674C-6490-4037-83C6-2B569A5B675D}.ReleaseWithReal|Any CPU.Build.0 = ReleaseWithReal|Any CPU
+		{4F0EFA08-C493-4974-8156-9C8F9EC8AD9C}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
+		{4F0EFA08-C493-4974-8156-9C8F9EC8AD9C}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
+		{4F0EFA08-C493-4974-8156-9C8F9EC8AD9C}.DebugWithReal|Any CPU.ActiveCfg = DebugWithReal|Any CPU
+		{4F0EFA08-C493-4974-8156-9C8F9EC8AD9C}.DebugWithReal|Any CPU.Build.0 = DebugWithReal|Any CPU
+		{4F0EFA08-C493-4974-8156-9C8F9EC8AD9C}.DebugWithSpecs|Any CPU.ActiveCfg = DebugWithSpecs|Any CPU
+		{4F0EFA08-C493-4974-8156-9C8F9EC8AD9C}.DebugWithSpecs|Any CPU.Build.0 = DebugWithSpecs|Any CPU
+		{4F0EFA08-C493-4974-8156-9C8F9EC8AD9C}.ReleaseWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
+		{4F0EFA08-C493-4974-8156-9C8F9EC8AD9C}.ReleaseWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
+		{4F0EFA08-C493-4974-8156-9C8F9EC8AD9C}.ReleaseWithReal|Any CPU.ActiveCfg = ReleaseWithReal|Any CPU
+		{4F0EFA08-C493-4974-8156-9C8F9EC8AD9C}.ReleaseWithReal|Any CPU.Build.0 = ReleaseWithReal|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B6E797B6-159F-4C8A-B036-6F54843825FE} = {0537B1F0-8A10-4EA1-9315-50CF216E2B6A}
+		{7AAC674C-6490-4037-83C6-2B569A5B675D} = {D282C63D-DB8E-403B-BDF8-7B8D0CF05A7C}
+		{4F0EFA08-C493-4974-8156-9C8F9EC8AD9C} = {D282C63D-DB8E-403B-BDF8-7B8D0CF05A7C}
+		{D282C63D-DB8E-403B-BDF8-7B8D0CF05A7C} = {5F3CF931-D972-49BD-A0D8-EE5336C9BB4F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {480D7D0D-1C76-4F4E-A7FC-154AC6BD7FEB}
+	EndGlobalSection
+EndGlobal

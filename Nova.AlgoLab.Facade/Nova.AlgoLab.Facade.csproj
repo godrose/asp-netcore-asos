@@ -1,0 +1,108 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <Configurations>DebugWithFake;ReleaseWithFake;ReleaseWithReal;DebugWithReal;DebugWithSpecs</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugWithFake|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\DebugWithFake</OutputPath>
+    <DefineConstants></DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\bin\DebugWithFake\Nova.AlgoLab.Facade.xml</DocumentationFile>
+    <IntermediateOutputPath>obj\DebugWithFake</IntermediateOutputPath>
+    <NoWarn></NoWarn>
+    <NoStdLib>false</NoStdLib>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugWithSpecs|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\DebugWithSpecs</OutputPath>
+    <DefineConstants></DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\bin\DebugWithSpecs\Nova.AlgoLab.Facade.xml</DocumentationFile>
+    <IntermediateOutputPath>obj\DebugWithFake</IntermediateOutputPath>
+    <NoWarn />
+    <NoStdLib>false</NoStdLib>
+  </PropertyGroup>
+   
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugWithReal|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\DebugWithReal</OutputPath>
+    <DefineConstants></DefineConstants>
+    <DocumentationFile>..\bin\DebugWithReal\Nova.AlgoLab.Facade.xml</DocumentationFile>
+    <NoWarn></NoWarn>
+    <NoStdLib>false</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseWithFake|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\ReleaseWithFake</OutputPath>
+    <DefineConstants>RELEASEWITHFAKE;NETCOREAPP;NETCOREAPP2_0</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\bin\ReleaseWithFake\Nova.AlgoLab.Facade.xml</DocumentationFile>
+    <NoWarn></NoWarn>
+    <NoStdLib>false</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseWithReal|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType></DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\ReleaseWithReal</OutputPath>
+    <DefineConstants></DefineConstants>
+    <DocumentationFile>..\bin\ReleaseWithReal\Nova.AlgoLab.Facade.xml</DocumentationFile>
+    <NoWarn></NoWarn>
+    <NoStdLib>false</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="AspNet.Security.OpenIdConnect.Server" Version="2.0.0-rc3-final" />
+    <PackageReference Include="JetBrains.Annotations" Version="2018.2.1" />
+    <PackageReference Include="LogoFX.Bootstrapping" Version="2.0.0-rc1" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="2.2.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="3.0.0" />
+    <PackageReference Include="Solid.Extensibility" Version="2.0.0-rc1" />
+    <PackageReference Include="Solid.Practices.Composition.Core" Version="2.0.0-rc1" />
+    <PackageReference Include="Solid.Bootstrapping" Version="2.0.0-rc1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="3.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="3.0.0" />
+    <PackageReference Include="Solid.Practices.Composition.Web" Version="2.0.0-rc1" />
+    <PackageReference Include="LogoFX.Server.Bootstrapping" Version="2.0.0-rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>   
+  <ItemGroup>
+    <Content Remove="Nova.AlgoLab.Facade.Development.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="Nova.AlgoLab.Facade.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Properties\launchSettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>  
+  <ItemGroup>
+    <Compile Remove="WebHostBuilderExtensions.cs" />
+  </ItemGroup>  
+  <ItemGroup>
+    <ProjectReference Include="..\Nova.AlgoLab.Data.Contracts.Dto\Nova.AlgoLab.Data.Contracts.Dto.csproj" />
+    <ProjectReference Include="..\Nova.AlgoLab.Data.Contracts.Providers\Nova.AlgoLab.Data.Contracts.Providers.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Configurations>DebugWithFake;ReleaseWithFake;ReleaseWithReal;DebugWithReal;DebugWithSpecs</Configurations>
+  </PropertyGroup>
+    
+  <PropertyGroup>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+ 
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugWithFake|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\DebugWithFake</OutputPath>
+    <DefineConstants></DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <IntermediateOutputPath>obj\DebugWithFake</IntermediateOutputPath>
+    <NoWarn></NoWarn>
+    <NoStdLib>false</NoStdLib>
+  </PropertyGroup>  
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugWithSpecs|AnyCPU'">
+    <NoStdLib>false</NoStdLib>
+    <OutputPath>..\bin\DebugWithSpecs</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugWithReal|AnyCPU' ">
+    <DebugType></DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants></DefineConstants>
+    <NoWarn></NoWarn>
+    <NoStdLib>false</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseWithFake|AnyCPU' ">
+    <DebugType></DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\ReleaseWithFake</OutputPath>
+    <DefineConstants></DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn></NoWarn>
+    <NoStdLib>false</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseWithReal|AnyCPU' ">
+    <DebugType></DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants></DefineConstants>
+    <NoWarn></NoWarn>
+    <NoStdLib>false</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Nova.AlgoLab.Data.Contracts.Dto\Nova.AlgoLab.Data.Contracts.Dto.csproj" />
+  </ItemGroup>
+</Project>
