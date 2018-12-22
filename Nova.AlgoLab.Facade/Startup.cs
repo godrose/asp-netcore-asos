@@ -21,8 +21,7 @@ namespace Nova.AlgoLab.Facade
         {
             var bootstrapper = new Bootstrapper(services)
                 .UseCompositionModules<BootstrapperBase, IServiceCollection>()
-                .Use(new RegisterCoreMiddleware<BootstrapperBase>())
-                .Use(new RegisterControllersMiddleware<BootstrapperBase>());           
+                .Use(new RegisterCoreMiddleware<BootstrapperBase>());           
             bootstrapper.Initialize();
         }
 
