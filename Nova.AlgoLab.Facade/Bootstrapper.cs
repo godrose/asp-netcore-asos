@@ -11,7 +11,7 @@ namespace Nova.AlgoLab.Facade
 
         public override string[] Prefixes => new[]
         {
-            "Nova.AlgoLab.Facade"
+            "Nova.AlgoLab"
         };
     }
 }

@@ -1,12 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
     <Configurations>DebugWithFake;ReleaseWithFake;ReleaseWithReal;DebugWithReal;DebugWithSpecs</Configurations>
   </PropertyGroup>
 
   <PropertyGroup>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <ApplicationIcon />
+    <OutputType>Exe</OutputType>
+    <StartupObject />
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugWithFake|AnyCPU' ">
@@ -68,7 +71,6 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="AspNet.Security.OpenIdConnect.Server" Version="2.0.0-rc3-final" />
-    <PackageReference Include="JetBrains.Annotations" Version="2018.2.1" />
     <PackageReference Include="LogoFX.Bootstrapping" Version="2.0.0-rc1" />
     <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
@@ -97,6 +99,7 @@
     <Compile Remove="WebHostBuilderExtensions.cs" />
   </ItemGroup>  
   <ItemGroup>
+    <ProjectReference Include="..\Nova.AlgoLab.Authorization\Nova.AlgoLab.Authorization.csproj" />
     <ProjectReference Include="..\Nova.AlgoLab.Data.Contracts.Dto\Nova.AlgoLab.Data.Contracts.Dto.csproj" />
     <ProjectReference Include="..\Nova.AlgoLab.Data.Contracts.Providers\Nova.AlgoLab.Data.Contracts.Providers.csproj" />
   </ItemGroup>
